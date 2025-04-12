@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/header";
 import {blogConfig} from "@/blog.config";
 import ProviderTheme from "@/provider/provider-theme";
@@ -29,9 +29,8 @@ export default function RootLayout({
             <body className={'relative min-h-screen flex flex-col justify-between'}>
             <div className={'flex-1'}>
                 <Header/>
-                <HeroBanner />
-                <main className={'md:mb-12 mb-8 min-w-full prose md:prose-md dark:prose-invert'}>
-                    {/* <Title/> */}
+                <main className={'md:mb-12 mb-8 min-w-full prose md:prose-lg dark:prose-invert'}>
+                    <Title/>
                     {children}
                 </main>
             </div>
