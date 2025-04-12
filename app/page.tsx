@@ -21,6 +21,7 @@ export const metadata: Metadata = getMetadata("home")
 const Home = () => {
     return (
         <div className="">
+            <HeroBanner />
             <BusinessIntro />
             <BlueBanner title="Dịch Vụ Đặt Mâm Cúng Trọn Gói" description="Tiết kiệm thời gian, an tâm chuẩn bị lễ cúng tươm tất." />
             {/* <ServiceExplanationV2 /> */}

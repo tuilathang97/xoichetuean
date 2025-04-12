@@ -29,7 +29,6 @@ export default function RootLayout({
             <body className={'relative min-h-screen flex flex-col justify-between'}>
             <div className={'flex-1'}>
                 <Header/>
-                <HeroBanner />
                 <main className={'md:mb-12 mb-8 min-w-full prose md:prose-md dark:prose-invert'}>
                     {/* <Title/> */}
                     {children}

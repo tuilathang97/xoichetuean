@@ -73,7 +73,7 @@ const faqs = [
 
 export default function FrequentlyAskedQuestions11() {
   return (
-    <div className="container mx-auto w-full max-w-3xl px-4 py-0">
+    <div className="container px-4 md:px-6">
       <div className="relative pb-4text-center">
         <h2 className="text-3xl font-bold tracking-tight">
           Câu hỏi thường gặp

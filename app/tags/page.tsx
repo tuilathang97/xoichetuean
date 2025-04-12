@@ -18,7 +18,7 @@ const Tags = () => {
 
     return (
         <PageContainer>
-            <div className={'flex'}>
+            <div className={'flex flex-wrap'}>
                 {Object.keys(tags).map((tag: string) => (
                     <Link href={`/blog?tag=${tag}`}>
                         <Button className={'text-lg px-4 underline-offset-8'} size={'lg'} variant={'link'} key={tag}>
