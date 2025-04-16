@@ -9,7 +9,7 @@ import {
     SheetContent,
     SheetTrigger
 } from "@/components/ui/sheet";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import {useState} from "react";
 import {Separator} from "@/components/ui/separator";
 import {Github, Menu, Moon, Sun} from "lucide-react";
@@ -42,7 +42,10 @@ const Header = ({ isPastHero = false }: HeaderProps) => {
                                 height={28}
                                 width={28}
                                 alt={'logo'}
-                            />
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         }
                         {logo?.text && <div className={'ml-1 text-lg font-semibold'}>
                             {logo?.text}

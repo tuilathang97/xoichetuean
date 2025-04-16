@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -90,7 +90,10 @@ export default function PricingComponent() {
                     className="size-16 sm:size-20"
                     width={100}
                     height={100}
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto"
+                    }} />
                 </div>
                 <div>
                   <h2 className="mb-1 flex items-start text-2xl font-medium md:text-3xl 2xl:text-4xl">

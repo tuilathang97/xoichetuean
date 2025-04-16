@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import Image from "next/legacy/image";
+import Image from "next/image";
 // Removed unused icons: Filter, PieChart, Users, Sparkles
 
 export default function ServiceExplanation() { // Renamed component back
@@ -46,7 +46,10 @@ export default function ServiceExplanation() { // Renamed component back
               width={600}
               height={400}
               className="h-full w-full object-cover m-0"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
 
           
@@ -61,7 +64,10 @@ export default function ServiceExplanation() { // Renamed component back
               width={400}
               height={200}
               className="h-full w-full lg:max-h-[250px] object-cover m-0"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
           
           {/* Mien Bac Card */}

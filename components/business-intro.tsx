@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { FC } from 'react';
 // Removed Title import as it's not suitable here
 
@@ -38,12 +38,15 @@ const BusinessIntro: FC<BusinessIntroProps> = ({}) => {
           {/* Image */}
           <div className="relative h-64 md:h-96"> {/* Adjust height as needed */}
             <Image
-              src="/mam-cung.jpg" // Replace with your actual image path
+              // Replace with your actual image path
+              src="/mam-cung.jpg"
               alt="Giới thiệu Xôi Chè Tuệ An"
-              layout="fill"
-              objectFit="cover"
               className="rounded-lg my-0"
-            />
+              fill
+              sizes="100vw"
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
         </div>
 

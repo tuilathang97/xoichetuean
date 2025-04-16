@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
@@ -66,10 +66,12 @@ function GalleryItem({ image }: { image: GalleryImage }) {
           <Image
             src={image.src}
             alt={image.alt}
-            layout="fill"
-            objectFit="cover"
             className="transition-transform duration-300 hover:scale-110"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
           <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent p-4 opacity-0 transition-opacity duration-300 hover:opacity-100">
             <p className="text-sm font-medium text-white">{image.alt}</p>
           </div>
@@ -80,10 +82,12 @@ function GalleryItem({ image }: { image: GalleryImage }) {
           <Image
             src={image.src}
             alt={image.alt}
-            layout="fill"
-            objectFit="contain"
             className="rounded-lg"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "contain"
+            }} />
         </div>
         <p className="mt-2 text-center text-sm text-primary">{image.alt}</p>
       </DialogContent>

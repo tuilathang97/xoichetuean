@@ -1,6 +1,6 @@
 import { Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 interface Testimonial {
   quote: string;

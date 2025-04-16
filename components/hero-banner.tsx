@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 interface HeroBannerProps {
@@ -29,11 +29,13 @@ export default function HeroBanner({ heroRef }: HeroBannerProps) {
           fill
           priority
           className="object-cover brightness-100 saturate-110 my-0"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         {/* Lighter overlay */}
         <div className="absolute inset-0 " />
       </div>
-
       {/* Cartoon-style container without white background */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6">
         <div
@@ -60,7 +62,10 @@ export default function HeroBanner({ heroRef }: HeroBannerProps) {
                 width={400}
                 height={200}
                 className="rounded-lg w-full"
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto"
+                }} />
             </motion.div>
             {/* <p className="text-xl text-[#F16767] font-medium md:text-2xl drop-shadow-sm">
               Đầy đủ lễ vật - đa dạng món ăn - đúng phong tục
