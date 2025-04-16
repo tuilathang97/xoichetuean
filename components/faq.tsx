@@ -73,45 +73,47 @@ const faqs = [
 
 export default function FrequentlyAskedQuestions11() {
   return (
-    <div className="container px-4 md:px-6">
-      <div className="relative pb-4text-center">
-        <h2 className="text-3xl font-bold tracking-tight">
-          Câu hỏi thường gặp
-        </h2>
-        <p className="mt-4 text-muted-foreground">
-          Những câu hỏi thường gặp nhất về dịch vụ mâm cúng của chúng tôi.
-          <br />
-          Không tìm thấy câu trả lời bạn cần?{" "}
-          <a
-            href="#"
-            className="font-medium text-primary underline-offset-4 hover:underline"
-          >
-            Liên hệ với chúng tôi ngay!
-          </a>
-        </p>
-      </div>
+    <section className="px-4 md:px-6 bg-yellow-50">
+      <div className="container ">
+        <div className="relative pb-4text-center">
+          <h2 className="text-3xl font-bold tracking-tight mt-0">
+            Câu hỏi thường gặp
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Những câu hỏi thường gặp nhất về dịch vụ mâm cúng của chúng tôi.
+            <br />
+            Không tìm thấy câu trả lời bạn cần?{" "}
+            <a
+              href="#"
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Liên hệ với chúng tôi ngay!
+            </a>
+          </p>
+        </div>
 
-      <Accordion type="single" collapsible className="w-full">
-        {faqs.map((faq, index) => (
-          <AccordionItem
-            key={index}
-            value={`item-${index}`}
-            className="border-b"
-          >
-            <AccordionTrigger className="py-4 transition-all hover:no-underline [&[data-state=open]>div>svg]:rotate-180">
-              <div className="flex w-full items-center text-left">
-                <div className="mr-6 flex size-10 shrink-0 items-center justify-center rounded-lg border text-primary">
-                  {faq.icon}
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-b"
+            >
+              <AccordionTrigger className="py-4 transition-all hover:no-underline [&[data-state=open]>div>svg]:rotate-180">
+                <div className="flex w-full items-center text-left">
+                  <div className="mr-6 flex size-10 shrink-0 items-center justify-center rounded-lg border text-primary">
+                    {faq.icon}
+                  </div>
+                  <span className="flex-grow font-medium">{faq.question}</span>
                 </div>
-                <span className="flex-grow font-medium">{faq.question}</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="px-16 pb-4 pt-0">
-              <div className="text-muted-foreground">{faq.answer}</div>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-16 pb-4 pt-0">
+                <div className="text-muted-foreground">{faq.answer}</div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
   );
 }

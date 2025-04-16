@@ -1,4 +1,3 @@
-import {notFound} from "next/navigation";
 import {MDXRemote} from "next-mdx-remote/rsc";
 import {Suspense} from "react";
 import Time from "@/components/time";
@@ -48,7 +47,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({params}: any) {
     const post: any = await getPost(params.slug)
-    if (!post) return notFound()
+    if (!post) return null
     return {
         title: post.title,
         description: post.summary,
@@ -58,8 +57,7 @@ export async function generateMetadata({params}: any) {
 export default async function Post({params}: any) {
     const {slug} = params
     const post: any = await getPost(slug)
-    if (!post || post?.draft) notFound()
-
+    if (!post || post?.draft) return null
     return (
         <div className={"w-full flex justify-center"}>
             <div className={'w-full max-w-screen-lg  relative'}>
@@ -78,7 +76,7 @@ export default async function Post({params}: any) {
                             <DrawerContent>
                                 <DrawerHeader>
                                     <DrawerTitle>
-                                        Table of contents
+                                        Mục lục
                                     </DrawerTitle>
                                 </DrawerHeader>
                                 <Toc toc={post.toc}/>
@@ -96,7 +94,7 @@ export default async function Post({params}: any) {
                         <div className={'absolute -right-8 translate-x-full'}>
                             <div className={'w-full h-full max-h-[80vh] overflow-auto'}>
                                 <div className={'text-base font-bold mb-2'}>
-                                    Table of contents
+                                    Mục lục
                                 </div>
                                 <Toc toc={post.toc}/>
                             </div>
@@ -104,9 +102,9 @@ export default async function Post({params}: any) {
                     </div>
                     <article>
                         <div className={'mb-3 text-base text-zinc-400'}>
-                            <Time date={post.date}/> · {post.stats.words} words · {post.stats.text}
+                            <Time date={post.date}/> · {post.stats.words} từ · {post.stats.text}
                         </div>
-                        <Suspense fallback={<>Loading...</>}>
+                        <Suspense fallback={<>Đang tải...</>}>
                             <MDXRemote
                                 source={post.content}
                                 options={{

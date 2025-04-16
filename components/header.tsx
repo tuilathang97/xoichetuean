@@ -16,7 +16,11 @@ import {Github, Menu, Moon, Sun} from "lucide-react";
 import {useTheme} from "next-themes";
 import Search from "@/plugins/search";
 
-const Header = () => {
+interface HeaderProps {
+  isPastHero?: boolean
+}
+
+const Header = ({ isPastHero = false }: HeaderProps) => {
     const {routes, logo, githubRepo} = blogConfig
 
     //高亮导航栏
@@ -27,12 +31,13 @@ const Header = () => {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className={'w-full sticky top-0 bg-white/80 backdrop-blur-md shadow-sm z-[1000] min-h-20'}>
+        <div className={`w-full sticky top-0 backdrop-blur-md shadow-sm z-[1000] min-h-20 ${isPastHero ? 'bg-white/80' : 'bg-[url(/background.webp)]'}`}>
             <header className={'container flex justify-between py-4'}>
-                <div className={'flex justify-center items-center'}>
+                <div className={'flex justify-center items-center color-[#F16767]'}>
                     <Link className={'flex justify-center items-center mr-4'} href={'/'}>
                         {logo?.image &&
                             <Image
+                                className="text-pink-500 fill-pink-500 "
                                 src={logo?.image}
                                 height={28}
                                 width={28}
@@ -46,7 +51,7 @@ const Header = () => {
                     <div className={'hidden md:block space-x-1'}>
                         {routes.map((route: any) => (
                             <Link href={route?.value}>
-                                <Button variant={active == route.name ? 'secondary' : 'ghost'} className={'text-base'}>
+                                <Button variant={active == route.name ? 'secondary' : 'ghost'} className={'text-base '}>
                                     {route.name}
                                 </Button>
                             </Link>
@@ -81,21 +86,6 @@ const Header = () => {
                         </Sheet>
                     </div>
                     <Search/>
-                    <Link href={githubRepo}>
-                        <Button size={'icon'} variant={'ghost'}>
-                            <Github size={20}/>
-                        </Button>
-                    </Link>
-                    <Button
-                        size={'icon'}
-                        variant={'ghost'}
-                        onClick={() => {
-                            setTheme(theme == 'light' ? 'dark' : 'light')
-                        }}
-                    >
-                        {theme == 'light' && <Sun size={20}/>}
-                        {theme == 'dark' && <Moon size={20}/>}
-                    </Button>
                 </div>
             </header>
         </div>

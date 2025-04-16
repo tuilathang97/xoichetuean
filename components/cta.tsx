@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 
 export default function CallToAction12() {
   return (
-    <section className="py-24 bg-red-50">
+    <section className="py-24 bg-yellow-50">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:order-2">
@@ -22,7 +22,7 @@ export default function CallToAction12() {
             ></iframe>
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-4">Liên Hệ Đặt Mâm Cúng</h2>
+            <h2 className="text-3xl font-bold mb-4 mt-0">Liên Hệ Đặt Mâm Cúng</h2>
             <p className="text-muted-foreground mb-6">
               Gọi ngay hotline hoặc để lại thông tin để được tư vấn miễn phí
             </p>

@@ -39,7 +39,7 @@ const galleryImages: GalleryImage[] = [
 
 export default function SymmetricalGridGallery() {
   return (
-    <div className="pt-16">
+    <div className="py-16 md:py-32 bg-yellow-50">
       <div className="container mx-auto px-4 py-0">
         <h2 className="mb-8 text-center text-5xl font-bold mt-0 text-indigo-900">
           Hình ảnh các mâm cúng

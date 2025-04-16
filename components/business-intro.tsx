@@ -14,6 +14,7 @@ const BusinessIntro: FC<BusinessIntroProps> = ({}) => {
             <h2 className="text-3xl font-bold mb-4 mt-4 text-indigo-900"> {/* Use standard h2 tag */}
               Giới thiệu về Xôi Chè Tuệ An
             </h2>
+            
             <p className="text-lg text-indigo-800 mb-6 leading-relaxed"
               style={{
                 lineHeight: 2,

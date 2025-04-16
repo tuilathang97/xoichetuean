@@ -1,12 +1,26 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HeroBanner() {
+interface HeroBannerProps {
+  heroRef?: React.RefObject<HTMLElement>
+}
+
+export default function HeroBanner({ heroRef }: HeroBannerProps) {
+  const textVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 }
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 }
+  };
   return (
-    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+    <section ref={heroRef} className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       {/* Full-screen background image */}
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -14,7 +28,7 @@ export default function HeroBanner() {
           alt="Mâm cúng Tuệ An hình nền"
           fill
           priority
-          className="object-cover brightness-100 saturate-110"
+          className="object-cover brightness-100 saturate-110 my-0"
         />
         {/* Lighter overlay */}
         <div className="absolute inset-0 " />
@@ -22,26 +36,42 @@ export default function HeroBanner() {
 
       {/* Cartoon-style container without white background */}
       <div className="relative z-10 w-full max-w-4xl mx-auto px-6">
-        {/* Decorative elements */}
-        <div className="absolute -top-8 left-10 text-6xl text-blue-800 opacity-80 transform rotate-12">★</div>
-        <div className="absolute -bottom-8 right-10 text-6xl text-pink-800 opacity-80 transform -rotate-12">★</div>
         <div
-          className="p-10 md:p-16 text-center rounded-[2rem]"
+          className="p-10 md:p-16 md:pt-0 text-center rounded-[2rem]"
         >
           <div className="max-w-3xl mx-auto space-y-8">
-            <h1 className="text-4xl font-bold tracking-tight text-indigo-900 sm:text-5xl md:text-6xl drop-shadow-md">
-              Mâm cúng Tuệ An
+            <h1 className="text-4xl font-bold tracking-tight text-[rgb(185,64,64)] sm:text-5xl md:text-6xl drop-shadow-md">
+              Mâm cúng 
+              <span className="mt-4">
+                <span className=""> Tuệ</span> <span className="text">An</span>
+              </span>
             </h1>
-            <p className="text-xl text-indigo-950 font-medium md:text-2xl drop-shadow-sm">
+            {/* Image Column */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={imageVariants}
+              transition={{ duration: 0.5 }}
+              className="flex justify-center md:justify-end"
+            >
+              <Image
+                src="/babies.png"
+                alt="Mâm cúng Tuệ An"
+                width={400}
+                height={200}
+                className="rounded-lg w-full"
+              />
+            </motion.div>
+            {/* <p className="text-xl text-[#F16767] font-medium md:text-2xl drop-shadow-sm">
               Đầy đủ lễ vật - đa dạng món ăn - đúng phong tục
-            </p>
+            </p> */}
             <div className="flex justify-center">
               <Button
                 size="lg"
-                className="bg-indigo-800 text-white hover:bg-indigo-700 rounded-full px-8 py-6 font-bold text-lg shadow-lg transform transition-transform hover:scale-105 border-2 border-indigo-600"
+                className="bg-[rgb(185,64,64)] text-yellow-50 hover:bg-blue-500 rounded-full px-8 py-6 font-bold text-lg shadow-none border-0 transform transition-transform hover:scale-105 border-black h-16"
                 asChild
               >
-                <Link href="/booking">ĐẶT NGAY - GIẢM 10%</Link>
+                <Link href="/booking" className="no-underline">ĐẶT NGAY - GIẢM 10%</Link>
               </Button>
             </div>
           </div>

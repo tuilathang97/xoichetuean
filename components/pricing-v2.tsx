@@ -112,10 +112,10 @@ export default function PricingV2() {
   }, [currentIndex, isMobile]);
 
   return (
-    <section className="bg-white px-4 py-0 sm:px-6 lg:px-8"> {/* Changed background */}
+    <section className="bg-white px-4 py-0 sm:px-6 lg:px-8 md:py-8 bg-yellow-200"> {/* Changed background */}
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 text-center">
-          <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl md:text-5xl text-indigo-900 mb-4">
+          <h2 className="text-2xl font-extrabold text-foreground sm:text-3xl md:text-5xl text-indigo-900 mb-4 mt-8">
             Chọn Gói Mâm Cúng Phù Hợp
           </h2>
           <p className="mt-4 text-base text-muted-foreground sm:text-lg">

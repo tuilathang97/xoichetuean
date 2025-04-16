@@ -1,10 +1,10 @@
 {
-  "name": "next-blog",
-  "version": "0.5.0",
-  "description": "A minimal, responsive, and easy-to-use blog template for Next.js",
+  "name": "xoi-che-tue-an",
+  "version": "1.0.0",
+  "description": "Website xoi che Tue An",
   "main": "index.js",
-  "repository": "https://github.com/imyuanli/next-blog",
-  "author": "imyuanli",
+  "repository": "https://github.com/tuilathang97",
+  "author": "thangnguyen",
   "license": "MIT",
   "keywords": [
     "reactjs",
@@ -48,7 +48,7 @@
     "gitalk": "^1.8.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.408.0",
-    "next": "^14.2.5",
+    "next": "^14.2.28",
     "next-mdx-remote": "^5.0.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
@@ -63,6 +63,7 @@
     "remark-flexible-toc": "^1.1.1",
     "remark-gfm": "^4.0.0",
     "remark-normalize-headings": "^4.0.0",
+    "sharp": "^0.34.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^0.9.1"

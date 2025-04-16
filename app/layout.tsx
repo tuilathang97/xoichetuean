@@ -8,8 +8,8 @@ import Title from "@/components/title";
 import Footer from "@/components/footer";
 import BackToTop from "@/components/back-to-top";
 import Analytics from "@/plugins/analytics";
-import HeroBanner from "@/components/hero-banner";
-import {usePathname} from "next/navigation";
+
+
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -24,12 +24,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
         <ProviderTheme>
             <body className={'relative min-h-screen flex flex-col justify-between'}>
             <div className={'flex-1'}>
                 <Header/>
-                <main className={'md:mb-12 mb-8 min-w-full prose md:prose-md dark:prose-invert'}>
+                <main className={'min-w-full prose md:prose-md dark:prose-invert'}>
                     {/* <Title/> */}
                     {children}
                 </main>

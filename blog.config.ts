@@ -6,7 +6,7 @@ import Intro from "./components/intro.mdx" // introduction or about me
 // The following is the configuration of the blog, including the author, title, description, and other settings.
 const blogConfig: any = {
     // author name
-    author: "yuanli",
+    author: "Thang Nguyen",
 
     // Logo
     logo: {
@@ -15,39 +15,39 @@ const blogConfig: any = {
         // https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons
 
         // you can use image or text as the logo, you can choose both, but the image will be displayed first
-        image: "/logo.png", //  the file path of the logo in the public directory
-        text: "NextBlog", // null || text
+        image: "/logo.svg", //  the file path of the logo in the public directory
+        text: "Xôi chè Tuệ An", // null || text
 
         // whether the logo is a link to the home page
         isHomeLink: true, // true | false
     },
 
     // website title
-    title: "NextBlog",
+    title: "Xôi chè Tuệ An",
 
     // website description
-    description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css",
+    description: "Chuyên cung cấp dịch vụ đặt mâm cúng trọn gói, đầy đủ lễ vật, đa dạng món ăn, đúng phong tục. Đầy tháng, sinh nhật, thôi nôi, mừng lễ cho bé và gia đình",
 
     // light | dark
     theme: "light",
 
     // your blog repo || your github repo || null
-    githubRepo: "https://github.com/imyuanli/next-blog",
+    githubRepo: "",
 
     // routes
     routes: [
         {
-            name: 'Blog',
+            name: 'Tin tức',
             value: '/blog'
         },
         {
-            name: 'Tags',
+            name: 'Danh mục',
             value: '/tags'
         },
-        {
-            name: 'Projects',
-            value: '/project'
-        },
+        // {
+        //     name: 'Projects',
+        //     value: '/project'
+        // },
     ],
 
     // socials links
@@ -171,7 +171,7 @@ const blogConfig: any = {
     footer: {
         isShow: true,
         // whether to display the "Powered by NextBlog" in the footer，you can set it to false，but I hope you can keep it，thank you！
-        isShowPoweredBy: true,
+        isShowPoweredBy: false,
     },
 }
 
@@ -212,7 +212,7 @@ const pluginConfig = {
     // Pagination
     pagination: {
         engine: "default", // "" | default:pagination button | loadMore:loading more button
-        pageSize: 5,
+        pageSize: 10,
     },
 
     // Search

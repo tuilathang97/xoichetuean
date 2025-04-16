@@ -31,12 +31,33 @@ const testimonials: Testimonial[] = [
     position: "Khách hàng tại Q.1",
     rating: 5,
   },
+  {
+    quote:
+      "Mâm cúng đầy đủ, trình bày đẹp mắt. Bé nhà mình rất thích và gia đình hài lòng!",
+    author: "Chị Ngọc Anh",
+    position: "Khách hàng tại Q.7",
+    rating: 5,
+  },
+  {
+    quote:
+      "Dịch vụ chuyên nghiệp từ khâu tư vấn đến giao hàng. Sẽ ủng hộ dài lâu!",
+    author: "Anh Minh Đức",
+    position: "Khách hàng tại Thủ Đức",
+    rating: 5,
+  },
+  {
+    quote:
+      "Đồ cúng tươi ngon, đảm bảo vệ sinh. Rất đáng đồng tiền bát gạo!",
+    author: "Chị Thu Hà",
+    position: "Khách hàng tại Q.1",
+    rating: 5,
+  },
 ];
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-gradient-to-b from-white to-red-50 py-20">
-      <div className="container px-4 md:px-6">
+    <section className="bg-yellow-50 py-10 md:py-20 md:pb-30">
+      <div className="container px-4">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="flex items-center gap-2 text-4xl font-bold text-yellow-600">
             4.9/5 <Star className="fill-yellow-600 text-yellow-600" /> (300+ đánh giá)

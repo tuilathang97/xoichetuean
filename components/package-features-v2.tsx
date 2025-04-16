@@ -3,7 +3,7 @@ import { PackageCheck, Leaf, Clock } from "lucide-react";
 export default function PackageFeaturesV2() { // Renamed component
   return (
     <section
-      className="py-16 md:py-36 bg-cover bg-center"
+      className="py-16  md:py-48 bg-cover bg-center"
       style={{ backgroundImage: "url('/background-2.webp')" }}
     >
       <div className="container">
@@ -13,16 +13,9 @@ export default function PackageFeaturesV2() { // Renamed component
               {
                 title: "Đầy Đủ Lễ Vật Truyền Thống",
                 description:
-                  "Mâm cúng được chuẩn bị kỹ lưỡng với đầy đủ các lễ vật cần thiết theo đúng phong tục.",
+                "Mâm cúng được chuẩn bị kỹ lưỡng với đầy đủ các lễ vật cần thiết theo đúng phong tục.",
                 icon: PackageCheck, // Updated icon
                 bgColor: "bg-blue-100", // Added background color
-              },
-              {
-                title: "Nguyên Liệu Tươi Ngon, Chất Lượng",
-                description:
-                  "Chúng tôi chỉ sử dụng nguyên liệu tươi sạch, được chọn lọc kỹ càng, đảm bảo an toàn và hương vị.",
-                icon: Leaf, // Updated icon
-                bgColor: "bg-pink-100", // Added background color
               },
               {
                 title: "Giao Hàng Nhanh, Tư Vấn Tận Tâm",
@@ -30,6 +23,13 @@ export default function PackageFeaturesV2() { // Renamed component
                   "Giao mâm cúng nóng hổi tận nơi trong 2 giờ (TP.HCM) và hỗ trợ tư vấn 24/7.",
                 icon: Clock, // Updated icon
                 bgColor: "bg-yellow-100", // Added background color
+              },
+              {
+                title: "Nguyên Liệu Tươi Ngon, Chất Lượng",
+                description:
+                  "Chúng tôi chỉ sử dụng nguyên liệu tươi sạch, được chọn lọc kỹ càng, đảm bảo an toàn và hương vị.",
+                icon: Leaf, // Updated icon
+                bgColor: "bg-pink-100", // Added background color
               },
             ].map((step, index) => (
               <div
