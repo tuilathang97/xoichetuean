@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 
 export default function CallToAction12() {
   return (
-    <section className="py-24 bg-yellow-50">
+    <section className="py-24">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="md:order-2">

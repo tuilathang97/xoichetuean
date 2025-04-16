@@ -32,7 +32,7 @@ const Pagination = ({allCount, generateHref}: any) => {
             {engine === "loadMore" &&
                 <Link href={generateHref(page + 1)}>
                     <Button variant={"outline"} className={'w-full'}>
-                        Load More ···
+                        Tải thêm ···
                     </Button>
                 </Link>
             }

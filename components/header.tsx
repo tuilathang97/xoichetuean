@@ -15,6 +15,7 @@ import {Separator} from "@/components/ui/separator";
 import {Github, Menu, Moon, Sun} from "lucide-react";
 import {useTheme} from "next-themes";
 import Search from "@/plugins/search";
+import { cn } from "@/lib/utils";
 
 interface HeaderProps {
   isPastHero?: boolean
@@ -53,8 +54,8 @@ const Header = ({ isPastHero = false }: HeaderProps) => {
                     </Link>
                     <div className={'hidden md:block space-x-1'}>
                         {routes.map((route: any) => (
-                            <Link href={route?.value}>
-                                <Button variant={active == route.name ? 'secondary' : 'ghost'} className={'text-base '}>
+                            <Link href={route?.value} key={route?.value}>
+                                <Button variant={active == route.name ? 'secondary' : 'ghost'} className={cn('text-base', )}>
                                     {route.name}
                                 </Button>
                             </Link>
@@ -66,14 +67,14 @@ const Header = ({ isPastHero = false }: HeaderProps) => {
                         <Sheet open={open} onOpenChange={() => {
                             setOpen(!open)
                         }}>
-                            <SheetTrigger>
+                            <SheetTrigger asChild>
                                 <Button size={'icon'} variant={'ghost'}>
                                     <Menu size={20}/>
                                 </Button>
                             </SheetTrigger>
-                            <SheetContent side={'top'} className={'w-full space-y-4 p-12 text-sm'}>
+                            <SheetContent side={'top'} className={'w-full space-y-4 p-12 text-sm mt-16'}>
                                 {routes.map((route: any, index: number) => (
-                                    <div className={'space-y-4'}>
+                                    <div className={'space-y-4'} key={index}>
                                         <Link href={route.value} onClick={() => {
                                             setOpen(false)
                                         }}>

@@ -29,10 +29,7 @@ export default function HeroBanner({ heroRef }: HeroBannerProps) {
           fill
           priority
           className="object-cover brightness-100 saturate-110 my-0"
-          style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+        />
         {/* Lighter overlay */}
         <div className="absolute inset-0 " />
       </div>

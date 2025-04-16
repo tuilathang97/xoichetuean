@@ -24,21 +24,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-        <ProviderTheme>
-            <body className={'relative min-h-screen flex flex-col justify-between'}>
-            <div className={'flex-1'}>
-                <Header/>
-                <main className={'md:mb-12 mb-8 min-w-full prose md:prose-lg dark:prose-invert'}>
-                    <Title/>
-                    {children}
-                </main>
-            </div>
-            <Footer/>
-            <BackToTop/>
-            <Analytics/>
-            </body>
-        </ProviderTheme>
-        </html>
+        <div className={'flex-1'}>
+            {children}
+        </div>
     );
 }

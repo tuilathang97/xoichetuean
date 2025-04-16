@@ -63,8 +63,8 @@ const blogConfig: any = {
 
     // home page config
     home: {
-        // title: "Welcome to NextBlog",
-        // description: "A minimalist blog created with Next.js ,Shadcn-ui and Tailwind.css",
+        title: "Trang chủ ",
+        description: "Chuyên cung cấp dịch vụ đặt mâm cúng trọn gói, đầy đủ lễ vật, đa dạng món ăn, đúng phong tục. Đầy tháng, sinh nhật, thôi nôi, mừng lễ cho bé và gia đình",
 
         // // introduction or about me
         // // Why use components instead of configurations? Because this makes the homepage more customizable instead of a hard-coded template.

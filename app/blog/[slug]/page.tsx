@@ -127,7 +127,7 @@ export default async function Post({params}: any) {
                             />
                         </Suspense>
                     </article>
-                    <Comments/>
+                    {/* <Comments/> */}
                 </div>
             </div>
         </div>

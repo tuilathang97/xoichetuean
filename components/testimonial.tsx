@@ -56,7 +56,7 @@ const testimonials: Testimonial[] = [
 
 export default function TestimonialSection() {
   return (
-    <section className="bg-yellow-50 py-10 md:py-20 md:pb-30">
+    <section className="bg-yellow-50 py-10 md:py-20 md:pb-30 bg-[url('/bubbles-background.webp')] bg-cover">
       <div className="container px-4">
         <div className="flex flex-col items-center space-y-4 text-center">
           <div className="flex items-center gap-2 text-4xl font-bold text-yellow-600">
@@ -72,7 +72,7 @@ export default function TestimonialSection() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-card text-card-foreground">
-              <CardContent className="space-y-4 p-6 min-h-[400px] flex flex-col justify-center">
+              <CardContent className="bg-wheat space-y-4 p-6 min-h-[400px] flex flex-col justify-center">
                 <p className="text-lg italic">
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>

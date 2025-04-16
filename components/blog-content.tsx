@@ -51,43 +51,45 @@ const BlogContent = ({posts}: any) => {
     return (
         <>
             {posts.map((post: any, index: number) => (
-                <div className={'space-y-4'} key={index}>
-                    <div className={'space-y-4'}>
-                        <div className={'block md:hidden'}>
-                            <Time date={post.date}/>
-                        </div>
-                        <CardTitle className={'not-prose space-x-4 flex justify-start items-center'}>
-                            <Link className={'hover:underline hover:underline-offset-8'} href={`/blog/${post.id}`}>
-                                {post.title}
-                            </Link>
-                            {post.pinned && (
-                                <Badge className={'li'}>
-                                    Pinned
-                                </Badge>
-                            )}
-                        </CardTitle>
-                        <div className={'flex flex-col md:flex-row md:space-x-4'}>
-                            <div className={'hidden md:block'}>
+                <div className={'space-y-4 border shadow-lg p-4 rounded-lg flex gap-4 items-center'} key={index}>
+                    <div>
+                        <div className={'space-y-4'}>
+                            <div className={'block md:hidden'}>
                                 <Time date={post.date}/>
                             </div>
-                            <div className={'space-x-2'}>
-                                {post?.tags?.map((tag: string, index: number) => (
-                                    <Link href={`/blog?tag=${tag}`}>
-                                        <Badge key={index} variant={currentTag == tag ? "secondary" : "outline"}>
-                                            #{tag}
-                                        </Badge>
-                                    </Link>
-                                ))}
+                            <CardTitle className={'not-prose space-x-4 flex justify-start items-center'}>
+                                <Link className={'hover:underline hover:underline-offset-8 text-yellow-900'} href={`/blog/${post.id}`}>
+                                    {post.title}
+                                </Link>
+                                {post.pinned && (
+                                    <Badge className={'li'}>
+                                        Pinned
+                                    </Badge>
+                                )}
+                            </CardTitle>
+                            <div className={'flex flex-col md:flex-row md:space-x-4'}>
+                                <div className={'hidden md:block'}>
+                                    <Time date={post.date}/>
+                                </div>
+                                <div className={'space-x-2'}>
+                                    {post?.tags?.map((tag: string, index: number) => (
+                                        <Link href={`/blog?tag=${tag}`}>
+                                            <Badge key={index} variant={currentTag == tag ? "secondary" : "outline"}>
+                                                #{tag}
+                                            </Badge>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         </div>
+                        <CardDescription className={'text-base'}>
+                            {post.summary}
+                        </CardDescription>
                     </div>
-                    <CardDescription className={'text-base'}>
-                        {post.summary}
-                    </CardDescription>
                     <div className={'flex justify-end'}>
                         <Link href={`/blog/${post.id}`}>
-                            <Button>
-                                Read More <ArrowRight size={16} className={'ml-2'}/>
+                            <Button className="bg-wheat text-black">
+                                Đọc thêm <ArrowRight size={16} className={'ml-2'}/>
                             </Button>
                         </Link>
                     </div>

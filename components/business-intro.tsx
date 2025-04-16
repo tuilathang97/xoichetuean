@@ -6,7 +6,7 @@ interface BusinessIntroProps {}
 
 const BusinessIntro: FC<BusinessIntroProps> = ({}) => {
   return (
-    <section className=" bg-yellow-50 min-h-[500px] py-16 md:py-32"> {/* Added background color for visibility */}
+    <section className=" bg-wheat min-h-[500px] py-16 md:py-32"> {/* Added background color for visibility */}
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Text Content */}

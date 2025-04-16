@@ -24,21 +24,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
-        <ProviderTheme>
+        <html lang="en">
+        {/* <ProviderTheme> */}
             <body className={'relative min-h-screen flex flex-col justify-between'}>
             <div className={'flex-1'}>
                 <Header/>
                 <main className={'min-w-full prose md:prose-md dark:prose-invert'}>
-                    {/* <Title/> */}
                     {children}
                 </main>
             </div>
             <Footer/>
             <BackToTop/>
-            <Analytics/>
             </body>
-        </ProviderTheme>
+        {/* </ProviderTheme> */}
         </html>
     );
 }

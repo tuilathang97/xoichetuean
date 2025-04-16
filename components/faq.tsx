@@ -73,7 +73,7 @@ const faqs = [
 
 export default function FrequentlyAskedQuestions11() {
   return (
-    <section className="px-4 md:px-6 bg-yellow-50">
+    <section className="px-4 md:px-6 bg-wheat py-16 md:py-24">
       <div className="container ">
         <div className="relative pb-4text-center">
           <h2 className="text-3xl font-bold tracking-tight mt-0">
@@ -97,11 +97,11 @@ export default function FrequentlyAskedQuestions11() {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-b"
+              className="border-b border-gray-700"
             >
               <AccordionTrigger className="py-4 transition-all hover:no-underline [&[data-state=open]>div>svg]:rotate-180">
                 <div className="flex w-full items-center text-left">
-                  <div className="mr-6 flex size-10 shrink-0 items-center justify-center rounded-lg border text-primary">
+                  <div className="mr-6 flex size-10 shrink-0 items-center justify-center rounded-lg border border-black text-primary">
                     {faq.icon}
                   </div>
                   <span className="flex-grow font-medium">{faq.question}</span>
