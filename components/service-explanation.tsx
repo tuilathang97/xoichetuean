@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import Image from "next/legacy/image";
 // Removed unused icons: Filter, PieChart, Users, Sparkles
 
 export default function ServiceExplanation() { // Renamed component back

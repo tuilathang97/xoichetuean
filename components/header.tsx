@@ -9,7 +9,7 @@ import {
     SheetContent,
     SheetTrigger
 } from "@/components/ui/sheet";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {useState} from "react";
 import {Separator} from "@/components/ui/separator";
 import {Github, Menu, Moon, Sun} from "lucide-react";
